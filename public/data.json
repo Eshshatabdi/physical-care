@@ -1,22 +1,22 @@
 [
     {
         "id": 1,
-        "name": "Collecting Blood sample",
-        "price": "10$",
+        "name": "Collecting Blood sample for test",
+        "price": "$30",
         "description": "Collecting blood sample from the patient to check to suger level of patient",
         "img": "https://img.freepik.com/free-photo/closeup-shot-doctor-with-rubber-gloves-taking-blood-test-from-patient_181624-56107.jpg?t=st=1650172261~exp=1650172861~hmac=e5940e96021fa6e30fd05ce018764f4de93f66b3608372c3dbff925b6c1fb3d3&w=740"
     },
     {
         "id": 2,
         "name": "Measuring blood Pressure",
-        "price": "15$",
+        "price": "$20",
         "description": "Monitor Blood pressure of my every patient ",
         "img": "https://img.freepik.com/free-photo/young-male-psysician-with-patient-measuring-blood-pressure_1303-17877.jpg?t=st=1650172389~exp=1650172989~hmac=12bda1076539dcea69df928b66c271cbff20c427289fca576b642ea91ac8daed&w=740"
     },
     {
         "id": 3,
         "name": "Counciling and prescribe medicne",
-        "price": "50$",
+        "price": "$50",
         "description": "First of all I talk with my patient and counciling them and then give the medicine",
         "img": "https://img.freepik.com/free-photo/doctor-her-patient-choosing-mammary-prosthesis-office_1301-7774.jpg?t=st=1650172456~exp=1650173056~hmac=4be01d14c37441f6596426095394f94c443f13995505f3cbc75233d236822315&w=740"
     }

@@ -15,9 +15,9 @@ const Service = ({ service }) => {
             <div className="card h-100 card-img ">
                 <img src={img} alt="" />
                 <h4>Name:{name}</h4>
-                <p>Peice:{price}</p>
+                <h5>Price:{price}</h5>
                 <p>description:{description}</p>
-                <button onClick={() => navigateToCheckOut()} className='btn btn-primary mt-0'>Check Out</button>
+                <button onClick={() => navigateToCheckOut()} className='btn btn-primary'>Book</button>
 
 
 
