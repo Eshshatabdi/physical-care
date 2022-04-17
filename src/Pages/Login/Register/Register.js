@@ -3,6 +3,7 @@ import { Button, Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import OtherLoginSystem from '../../OtherLoginSystem/OtherLoginSystem';
 
 const Register = () => {
     const [email, setEmail] = useState('');
@@ -76,8 +77,10 @@ const Register = () => {
             <p>
                 Already have an account? <Link className='form-link ' to='/login'>Login</Link>
             </p>
+            <OtherLoginSystem></OtherLoginSystem>
 
         </div>
+
     );
 };
 
