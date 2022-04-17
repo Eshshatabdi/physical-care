@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import DoctorInfo from '../../DoctorInfo/DoctorInfo';
 import Service from '../Service/Service';
+
 
 const Services = () => {
     const [services, setServices] = useState([]);
@@ -23,6 +25,7 @@ const Services = () => {
                     }
                 </div>
             </div>
+
 
 
         </div>
