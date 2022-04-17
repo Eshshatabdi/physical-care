@@ -1,18 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import auth from '../../../firebase.init';
 
 const Login = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
     const navigate = useNavigate()
 
 
     const navigateRegister = event => {
         navigate('/register')
     }
-    // if (user) {
-    //     navigate(from, { replace: true });
-    // }
+    if (user) {
+        navigate(from, { replace: true });
+    }
+    if (user) {
+        navigate('/')
+    }
     return (
         <div className='container w-50 mx-auto'>
             <h3 className='text-center'>Please log in</h3>
