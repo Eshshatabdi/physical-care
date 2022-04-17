@@ -67,7 +67,7 @@ const Login = () => {
                     Login
                 </Button>
             </Form>
-            <p>New t Genius Car? <Link to='/register' className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link> </p>
+            <p>New to doctors chamber? <Link to='/register' className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link> </p>
 
         </div>
     );
