@@ -8,8 +8,8 @@ const Service = ({ service }) => {
             <div className="card h-100 card-img ">
                 <img src={img} alt="" />
                 <h4>Name:{name}</h4>
-                {/* <p>Peice:{price}</p>
-                <p>description:{description}</p> */}
+                <p>Peice:{price}</p>
+                <p>description:{description}</p>
                 <button className='btn btn-primary mt-0'>Check Out</button>
 
 
