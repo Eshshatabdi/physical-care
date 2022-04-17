@@ -6,7 +6,7 @@ import Login from './Pages/Login/Login/Login';
 import Blogs from './Pages/Blogs/Blogs';
 import CheckOut from './Pages/CheckOut/CheckOut';
 import Header from './Pages/Header/Header';
-import Register from './Pages/Login/Register/Register';
+import Register from './Pages/Login/Register/Register'
 
 function App() {
   return (
