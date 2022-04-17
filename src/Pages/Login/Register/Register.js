@@ -70,7 +70,7 @@ const Register = () => {
                 </Form.Group>
                 <p style={{ color: 'red' }}>{error}</p>
                 <Button variant="primary" type="submit">
-                    Submit
+                    Register
                 </Button>
             </Form>
             <p>

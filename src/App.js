@@ -7,6 +7,7 @@ import Blogs from './Pages/Blogs/Blogs';
 import CheckOut from './Pages/CheckOut/CheckOut';
 import Header from './Pages/Header/Header';
 import Register from './Pages/Login/Register/Register'
+import NotFound from './Pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
 
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/checkout' element={<CheckOut></CheckOut>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
 
     </div>

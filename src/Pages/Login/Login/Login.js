@@ -9,14 +9,30 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const location = useLocation();
-    let from = location.state?.from?.pathname || "/";
+    const navigate = useNavigate()
     const [
         signInWithEmailAndPassword,
         user,
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
-    const navigate = useNavigate()
+
+
+
+
+    let from = location.state?.from?.pathname || "/";
+    const handleEmailBlur = event => {
+        setEmail(event.target.value);
+    };
+    const handlePasswordBlur = event => {
+        setPassword(event.target.value);
+    };
+    const handleUserLogIn = event => {
+        event.preventDefault();
+        signInWithEmailAndPassword(email, password)
+    }
+
+
 
 
     const navigateRegister = event => {
@@ -26,24 +42,29 @@ const Login = () => {
         navigate(from, { replace: true });
     }
     if (user) {
-        navigate('/')
+        navigate('/home')
     }
     return (
         <div className='container w-50 mx-auto'>
             <h3 className='text-center'>Please log in</h3>
-            <Form>
+            <Form onSubmit={handleUserLogIn}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" />
+                    <Form.Control onBlur={handleEmailBlur} type="email" placeholder="Enter email" />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" placeholder="Password" />
+                    <Form.Control onBlur={handlePasswordBlur} type="password" placeholder="Password" />
                 </Form.Group>
+                <p style={{ color: 'red' }}>{error?.message}</p>
+                {
+                    loading && <h4>Loading....</h4>
+
+                }
 
                 <Button variant="primary" type="submit">
-                    Submit
+                    Login
                 </Button>
             </Form>
             <p>New t Genius Car? <Link to='/register' className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link> </p>
