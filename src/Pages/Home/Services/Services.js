@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import DoctorInfo from '../../DoctorInfo/DoctorInfo';
 import Service from '../Service/Service';
 
 

@@ -9,15 +9,15 @@ import github from '../../images/github-edit.png';
 
 const OtherLoginSystem = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-    const [signInWithGithub, gituser, gitloading, giterror] = useSignInWithGithub(auth);
+    const [signInWithGithub, gitUser, gitLoading, gitError] = useSignInWithGithub(auth);
     const navigate = useNavigate();
     let errorShow;
-    if (error || giterror) {
-        errorShow = <p className='text-danger'>Error:{error?.message} {giterror?.message} </p>
+    if (error || gitError) {
+        errorShow = <p className='text-danger'>Error:{error?.message} {gitError?.message} </p>
 
 
     }
-    if (user || gituser) {
+    if (user || gitUser) {
         navigate('/home')
     }
     return (
