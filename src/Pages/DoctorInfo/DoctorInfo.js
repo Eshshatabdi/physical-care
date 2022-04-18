@@ -7,7 +7,7 @@ const DoctorInfo = () => {
             <div className="row">
                 <div className="col-md-6 mt-5">
                     <h3 className='text-primary'>Doctor Arora</h3>
-                    <p>Patient health is my First priority..here I provide lots of services for your healthy life..I have 10years experience in this profession...if you have any query feel free to ask</p>
+                    <p>As you know health is wealth.Therefore patient health is my First priority. Here I provide lots of services for your healthy life.I have 10 years experience in this profession. If you have any query feel free to ask</p>
 
 
                 </div>

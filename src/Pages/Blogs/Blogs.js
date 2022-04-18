@@ -2,7 +2,7 @@ import React from 'react';
 
 const Blogs = () => {
     return (
-        <div className='container'>
+        <div className='container mt-3'>
             <div className="row">
                 <div className="card">
                     <h4 className='text-primary'>1. What is the difference between authorization and authentication</h4>
