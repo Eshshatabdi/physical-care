@@ -10,7 +10,7 @@ const Register = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-    const [error, SetError] = useState('');
+    const [error, setError] = useState('');
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
 
@@ -19,7 +19,9 @@ const Register = () => {
     const [
         createUserWithEmailAndPassword,
         user,
-        loading,
+        loading
+
+
 
 
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
@@ -40,11 +42,11 @@ const Register = () => {
         event.preventDefault();
 
         if (password !== confirmPassword) {
-            // setError('your two password did not matched')
+            setError('your two password did not matched')
             return;
         }
         if (password.length < 6) {
-            // setError('Password must be 6 characters or longer')
+            setError('Password must be 6 characters or longer')
             return;
         }
 
@@ -63,27 +65,25 @@ const Register = () => {
             <Form onSubmit={handleCreateUser} >
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Name</Form.Label>
-                    <Form.Control onBlur={handlenameBlur} type="text" placeholder="Name" />
+                    <Form.Control onBlur={handlenameBlur} type="text" placeholder="Name" required />
 
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control onBlur={handleEmailBlur} type="email" placeholder="Enter email" />
+                    <Form.Control onBlur={handleEmailBlur} type="email" placeholder="Enter email" required />
 
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control onBlur={handlePasswordBlur} type="password" placeholder="Password" />
+                    <Form.Control onBlur={handlePasswordBlur} type="password" placeholder="Password" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label> confirm Password</Form.Label>
-                    <Form.Control onBlur={handleConfirmPasswordBlur} type="password" placeholder="Password" />
+                    <Form.Control onBlur={handleConfirmPasswordBlur} type="password" placeholder="Password" required />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group>
-                <p style={{ color: 'red' }}>{error}</p>
+
+                <p className='text-danger'>{error}</p>
                 <Button variant="primary" type="submit">
                     Register
                 </Button>

@@ -62,14 +62,14 @@ const Login = () => {
             <Form onSubmit={handleUserLogIn}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control onBlur={handleEmailBlur} type="email" placeholder="Enter email" />
+                    <Form.Control onBlur={handleEmailBlur} type="email" placeholder="Enter email" required />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control onBlur={handlePasswordBlur} type="password" placeholder="Password" />
+                    <Form.Control onBlur={handlePasswordBlur} type="password" placeholder="Password" required />
                 </Form.Group>
-                <p style={{ color: 'red' }}>{error?.message}</p>
+                <p className='text-danger'>{error?.message}</p>
                 {
                     loading && <h4>Loading....</h4>
 
