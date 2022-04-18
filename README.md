@@ -1,4 +1,11 @@
-# Getting Started with Create React App
+## physical Care
+##
+## Description:
+* In home section header, banner,service,footer apply
+* In register section registration form is set
+* In log in section User login form is set
+* In home page every service has a button which proceed checkout section
+* There is also Blog and About section where describe some topic  
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

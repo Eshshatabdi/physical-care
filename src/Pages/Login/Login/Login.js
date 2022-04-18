@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
+import OtherLoginSystem from '../../OtherLoginSystem/OtherLoginSystem';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -53,7 +55,7 @@ const Login = () => {
         setEmail(event.target.value);
 
         await sendPasswordResetEmail(email);
-        alert('Sent email');
+        toast('Sent email');
 
     }
     return (
@@ -80,7 +82,9 @@ const Login = () => {
                 </Button>
             </Form>
             <p>New to doctors chamber? <Link to='/register' className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link> </p>
-            <p>Forget Password? <Link to='/register' className='text-parmery pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</Link> </p>
+            <p>Forget Password? <button to='/register' className='btn btn-link pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
+            <OtherLoginSystem></OtherLoginSystem>
+            <ToastContainer />
 
         </div>
     );
