@@ -52,13 +52,11 @@ const Register = () => {
 
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName: name });
-        console.log('Updated profile');
+        alert('Updated profile');
         navigate('/home')
 
     };
-    // if (user) {
-    //     console.log(user)
-    // }
+
     return (
         <div className='container w-50 mx-auto'>
             <h3 className='text-center text-primary'>Please Register</h3>
