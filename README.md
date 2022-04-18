@@ -6,7 +6,7 @@
 * In log in section User login form is set
 * In home page every service has a button which proceed checkout section
 * There is also Blog and About section where describe some topic 
-
+## List Of technologies
 
 
 ## Library:
@@ -14,8 +14,7 @@
 * react firebase hooks
 * React Router
 * react toast
-
-## * Firebase(storage system by google)
+* Firebase(storage system by google)
 ## framework:
 * react-bootstrap
 

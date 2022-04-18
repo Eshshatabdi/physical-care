@@ -52,7 +52,7 @@ const Register = () => {
 
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName: name });
-        console.log('Updated profile');
+        alert('Updated profile');
         navigate('/home')
 
     };
