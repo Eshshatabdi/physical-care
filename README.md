@@ -1,11 +1,21 @@
 ## physical Care
-##
+## Live link: https://authentication-assignmen-7c87c.web.app/
 ## Description:
 * In home section header, banner,service,footer apply
 * In register section registration form is set
 * In log in section User login form is set
 * In home page every service has a button which proceed checkout section
 * There is also Blog and About section where describe some topic  
+
+## Library:
+* React
+* react firebase hooks
+* React Router
+* react toast
+## framework
+* react-bootstrap
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
