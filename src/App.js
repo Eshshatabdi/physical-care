@@ -9,7 +9,6 @@ import Header from './Pages/Header/Header';
 import Register from './Pages/Login/Register/Register'
 import NotFound from './Pages/NotFound/NotFound';
 import RequireAuth from './Pages/RequireAuth/RequireAuth';
-import ServiceDetail from './Pages/Home/ServiceDetail/ServiceDetail';
 import About from './Pages/About/About';
 import Footer from './Pages/Footer/Footer';
 
@@ -22,8 +21,6 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
-        <Route path='/service/:serviceId' element={<ServiceDetail></ServiceDetail>}></Route>
-
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
 
