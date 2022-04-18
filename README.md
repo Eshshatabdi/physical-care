@@ -5,14 +5,18 @@
 * In register section registration form is set
 * In log in section User login form is set
 * In home page every service has a button which proceed checkout section
-* There is also Blog and About section where describe some topic  
+* There is also Blog and About section where describe some topic 
+
+
 
 ## Library:
 * React
 * react firebase hooks
 * React Router
 * react toast
-## framework
+
+## * Firebase(storage system by google)
+## framework:
 * react-bootstrap
 
 
